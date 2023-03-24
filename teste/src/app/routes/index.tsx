@@ -1,5 +1,5 @@
 import { Route, BrowserRouter, Routes as Switch } from "react-router-dom"
-import { Dashboard } from "../pages"
+import {Aplicacao } from "../pages"
 
 export const Routes = () => {
 
@@ -7,11 +7,13 @@ export const Routes = () => {
         <BrowserRouter>
             <Switch>
 
-                <Route path="/pagina-inicial" Component={Dashboard} />
+                <Route path="/pagina-inicial" Component={Aplicacao} />
 
-                <Route path="*" element={<Dashboard />} />
+                <Route path="*" element={<Aplicacao />} />
                 
             </Switch>
         </BrowserRouter>
     )
+
 }
+

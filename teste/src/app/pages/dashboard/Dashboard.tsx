@@ -1,8 +1,7 @@
-
-export const Dashboard = () =>{
-    return(
-        <p>Dashboard</p>
+export const Aplicacao = () => {
+    return (
+        <h1>Dashboard</h1>
     )
-       
-    
+
+
 }
