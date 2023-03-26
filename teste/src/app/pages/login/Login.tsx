@@ -1,27 +1,37 @@
-import { useState } from "react"
-import { useNavigate } from "react-router-dom"
+import { useEffect, useState } from "react"
 
 export const Login = () => {
 
-    const navigate = useNavigate()
+    const [email, setEmail] = useState('')
+    const [senha, setPassword] = useState('')
 
-    const handleClick = () => {
-        navigate('./pagina-inicial')
-    }
+    useEffect(() =>{
+        if(window.confirm('Você é homem?'))
+            console.log('homem')
+        else{
+            console.log('mulher')
+        }
+    }, [])
 
-    const handleEntrar = () =>{
+    useEffect(() => {
+        console.log('E-mail: ' + email)
+    }, [email])
+
+    useEffect(() => {
+        console.log('Senha: ' + senha)
+    }, [senha])
+
+    const handleEntrar = () => {
         console.log('E-mail: ' + email)
         console.log('Senha: ' + senha)
     }
-    const [email, setEmail] = useState('')
-    const [senha, setPassword] = useState('')
 
     return (
         <div>
             <form>
                 <label>
                     <span>E-mail</span>
-                    <input value={email} onChange={e => setEmail(e.target.value)}/>
+                    <input value={email} onChange={e => setEmail(e.target.value)} />
                 </label>
 
                 <label>
@@ -31,10 +41,10 @@ export const Login = () => {
                     <input type="password" value={senha} onChange={e => setPassword(e.target.value)} />
                 </label>
             </form>
-            
+
             <button type="button" onClick={handleEntrar}>Entrar</button>
             <div>
-                <button onClick={handleClick}>Página Inicial</button>
+
             </div>
         </div>
 
