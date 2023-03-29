@@ -1,0 +1,26 @@
+export const Menu = () =>{
+    return(
+        <div>
+            <ul>
+                <li>
+                    Produtos
+                </li>
+            </ul>
+            <ul>
+                <li>
+                    Produtos
+                </li>
+            </ul>
+            <ul>
+                <li>
+                    Produtos
+                </li>
+            </ul>
+            <ul>
+                <li>
+                    Produtos
+                </li>
+            </ul>
+        </div>
+    )
+}
